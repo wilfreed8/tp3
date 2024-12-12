@@ -26,7 +26,7 @@ public class orientationTest {
     void devrait_donner_comme_orientation_nord() {
 
         //When
-        String expectedOrientation = "nord";
+        String expectedOrientation = "Nord";
         //Given
         String actualOrientation = orientation.tourner(0);
         //
@@ -40,6 +40,36 @@ public class orientationTest {
         String expectedOrientation = "Est";
         //Given
         String actualOrientation = orientation.tourner(1);
+        //
+        assertThat(actualOrientation).isEqualTo(expectedOrientation);
+    }
+
+    @Test
+    void devrait_donner_comme_orientation_Sud() {
+        //When
+        String expectedOrientation = "Sud";
+        //Given
+        String actualOrientation = orientation.tourner(2);
+        //
+        assertThat(actualOrientation).isEqualTo(expectedOrientation);
+    }
+
+    @Test
+    void devrait_donner_comme_orientation_Ouest() {
+        //When
+        String expectedOrientation = "Ouest";
+        //Given
+        String actualOrientation = orientation.tourner(3);
+        //
+        assertThat(actualOrientation).isEqualTo(expectedOrientation);
+    }
+
+    @Test
+    void devrait_donner_comme_orientation_Nord() {
+        //When
+        String expectedOrientation = "Nord";
+        //Given
+        String actualOrientation = orientation.tourner(4);
         //
         assertThat(actualOrientation).isEqualTo(expectedOrientation);
     }
